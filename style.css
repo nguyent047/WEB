@@ -155,6 +155,7 @@ form {
     border-radius: 0.5em;
     margin: -0em .7em 0em 0.7em;
     padding: 0.5em;
+    overflow: hidden;
 }
 
 form fieldset {
@@ -186,11 +187,103 @@ button:hover {
 }
 
 button:active {
-  transform: scale(.9, .9);
-  background-color: rgb(255, 155, 197);
+    transform: scale(.9, .9);
+    background-color: rgb(255, 155, 197);
 }
 
 /* Themes button */
+
+@keyframes themeButtonDescription {
+    0% {
+        content: "F"
+    }
+    10% {
+        content: "Fil"
+    }
+    20% {
+        content: "Filt"
+    }
+    30% {
+        content: "Filter"
+    }
+    40% {
+        content: "Filteren"
+    }
+    50% {
+        content: "Filteren o"
+    }
+    60% {
+        content: "Filteren op "
+    }
+    70% {
+        content: "Filteren op t"
+    }
+    80% {
+        content: "Filteren op the"
+    }
+    90% {
+        content: "Filteren op thema"
+    }
+    100% {
+        content: "Filteren op thema's";
+    }
+}
+
+#themeButton:hover::after {
+    content: "Filteren op thema's";
+    display: block;
+    font-size: 0.7em;
+    margin: 1em 0 0 0;
+    animation: themeButtonDescription 0.5s;
+}
+
+/* Sort button */
+
+@keyframes sortButtonDescription {
+    0% {
+        content: ""
+    }
+    10% {
+        content: "De"
+    }
+    20% {
+        content: "De v"
+    }
+    30% {
+        content: "De ver"
+    }
+    40% {
+        content: "De verha"
+    }
+    50% {
+        content: "De verhale"
+    }
+    60% {
+        content: "De verhalen "
+    }
+    70% {
+        content: "De verhalen so"
+    }
+    80% {
+        content: "De verhalen sort"
+    }
+    90% {
+        content: "De verhalen sorter"
+    }
+    100% {
+        content: "De verhalen sorteren";
+    }
+}
+
+#sortButton:nth-of-type(2):hover::after {
+    content: "De verhalen sorteren";
+    display: block;
+    font-size: 0.7em;
+    margin: 1em 0 0 0;
+    animation: sortButtonDescription 0.5s;
+}
+
+/* Themes fieldset */
 
 body > form:nth-of-type(1) fieldset {
     position: absolute;
@@ -203,7 +296,7 @@ body > form:nth-of-type(1) fieldset.active {
     margin: 0;
 }
 
-/* Sort button */
+/* Sort fieldset */
 
 body > form:nth-of-type(2) fieldset {
     position: absolute;
@@ -214,16 +307,6 @@ body > form:nth-of-type(2) fieldset.active {
     transition: 0.5s;
     position:relative;
     margin: 0;
-}
-
-/* Search button */
-
-body > form button:nth-of-type(3) {
-    display:none;
-}
-
-body > form button:nth-of-type(3).active {
-    display:block;
 }
 
 /* Login */
@@ -310,6 +393,7 @@ aside {
     padding: 0.5em;
     padding-bottom: 2em;
     margin: 0em 2em 0 2em;
+    overflow: hidden;
 }
 
 aside button {
@@ -449,7 +533,7 @@ section button:last-of-type > span:hover ~ span:before {
     background: url(images/verliefd-smartphone.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: + calc(100%);
+    width: calc(100%);
     height: 350em;
 }
 
@@ -459,7 +543,7 @@ section button:last-of-type > span:hover ~ span:before {
     background: url(images/neerslachtig-smartphone.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: + calc(100%);
+    width: calc(100%);
     height: 170em;
 }
 
@@ -469,7 +553,7 @@ section button:last-of-type > span:hover ~ span:before {
     background: url(images/kinderboek-smartphone.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: + calc(100%);
+    width: calc(100%);
     height: 210em;
 }
 
@@ -522,7 +606,7 @@ section button:last-of-type > span:hover ~ span:before {
         background: url(images/verliefd-tablet.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        width: + calc(100%);
+        width: calc(100%);
         height: 145em;
     }
     
@@ -533,7 +617,7 @@ section button:last-of-type > span:hover ~ span:before {
         background: url(images/neerslachtig-tablet.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        width: + calc(100%);
+        width: calc(100%);
         height: 80em;
     }
     
@@ -544,7 +628,7 @@ section button:last-of-type > span:hover ~ span:before {
         background: url(images/kinderboek-tablet.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        width: + calc(100%);
+        width: calc(100%);
         height: 115em;
     }
     
@@ -693,7 +777,7 @@ section button:last-of-type > span:hover ~ span:before {
         background: url(images/verliefd%20desktop.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        width: + calc(100%);
+        width: calc(100%);
         height: 100em;
     }
     
@@ -704,7 +788,7 @@ section button:last-of-type > span:hover ~ span:before {
         background: url(images/neerslachtig-desktop.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        width: + calc(100%);
+        width: calc(100%);
         height: 50em;
     }
     
@@ -715,7 +799,7 @@ section button:last-of-type > span:hover ~ span:before {
         background: url(images/kinderboek-desktop.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        width: + calc(100%);
+        width: calc(100%);
         height: 80em;
     }
 }
