@@ -4,6 +4,6 @@
 
 ## How to install
 
-1. git clone git@github.com:nguyent047/polarbear.git
+1. git clone git@github.com:nguyent047/web.git
 2. cd web
 3. open index.html
